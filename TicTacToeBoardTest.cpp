@@ -27,25 +27,25 @@ TEST(TicTacToeBoardTest, turnX){
 	ASSERT_EQ(turn, X);
 }
 
-TEST(TicTacToeBoardTest, rl_oob){
+TEST(TicTacToeBoardTest, row_low_oob){
 	TicTacToeBoard board;
-	Piece place = board.placePiece(0,1);
+	Piece place = board.placePiece(-1,1);
 	ASSERT_EQ(place, Invalid);
 }
 
-TEST(TicTacToeBoardTest, rh_oob){
+TEST(TicTacToeBoardTest, row_high_oob){
 	TicTacToeBoard board;
 	Piece place = board.placePiece(4,1);
 	ASSERT_EQ(place, Invalid);
 }
 
-TEST(TicTacToeBoardTest, cl_oob){
+TEST(TicTacToeBoardTest, col_low_oob){
 	TicTacToeBoard board;
-	Piece place = board.placePiece(1,0);
+	Piece place = board.placePiece(1,-1);
 	ASSERT_EQ(place, Invalid);
 }
 
-TEST(TicTacToeBoardTest, ch_oob){
+TEST(TicTacToeBoardTest, col_high_oob){
 	TicTacToeBoard board;
 	Piece place = board.placePiece(1,4);
 	ASSERT_EQ(place, Invalid);

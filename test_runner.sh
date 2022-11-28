@@ -3,4 +3,4 @@
 make clean
 make
 ./TicTacToeBoardTest
-gcov TicTacToeBoard.cpp
+gcov -b TicTacToeBoard.cpp
